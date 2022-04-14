@@ -18,11 +18,12 @@ curl 'https://echo24.cz/' \
 
 clear
 
+echo ""
 cat ~/.tmp/temp.html | pup 'h3.articleNew-default__title' | grep -v "h3" | grep -v "/a" | grep -v "itemprop" | sed G
 
 echo ""
 echo ""
-sleep 2
+
 while true; do
     read -p "  Jít na echo? " yn
     case $yn in
